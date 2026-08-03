@@ -1,0 +1,245 @@
+.section {
+  background: #0E3B25;
+  color: #FFFFFF;
+  padding: 100px 0;
+  border-top: 1px solid rgba(236, 243, 158, 0.15);
+  border-bottom: 1px solid rgba(236, 243, 158, 0.15);
+}
+
+.header {
+  margin-bottom: 80px;
+}
+
+.header :global(.section-label) {
+  color: #ECF39E;
+}
+
+.header :global(.section-title) {
+  color: #FFFFFF;
+}
+
+.header :global(.section-subtitle) {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+}
+
+.card {
+  position: relative;
+  padding: 40px 36px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(236, 243, 158, 0.22);
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #90A955, #ECF39E);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #ECF39E;
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.35);
+}
+
+.cardTitle {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #ECF39E;
+  margin-bottom: 20px;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  color: #FFFFFF;
+}
+
+.unit {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cardDetail {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+}
+
+.extrasWrapper {
+  max-width: 800px;
+  margin-bottom: 48px;
+}
+
+.extrasList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.extraItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.extraIcon {
+  color: #ECF39E;
+  flex-shrink: 0;
+}
+
+.extraLabel {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.extraDots {
+  flex: 1;
+  border-bottom: 1px dashed rgba(236, 243, 158, 0.3);
+}
+
+.extraValue {
+  font-weight: 700;
+  color: #ECF39E;
+}
+
+/* Expandable Terms & Conditions Box */
+.rulesContainer {
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(236, 243, 158, 0.25);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.rulesToggleBtn {
+  width: 100%;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #FFFFFF;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.rulesToggleBtn:hover {
+  background: rgba(236, 243, 158, 0.06);
+}
+
+.rulesToggleTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ECF39E;
+}
+
+.chevronIcon {
+  color: #ECF39E;
+  transition: transform 0.3s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.rulesContent {
+  padding: 0 24px 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  animation: fadeIn 0.35s ease-out;
+}
+
+@media (min-width: 768px) {
+  .rulesContent {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ruleBox {
+  background: rgba(14, 59, 37, 0.6);
+  border: 1px solid rgba(236, 243, 158, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.ruleBoxTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ECF39E;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.ruleList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.5;
+}
+
+.ruleList strong {
+  color: #FFFFFF;
+}
+
+.highlightRule {
+  background: rgba(220, 38, 38, 0.15);
+  border-left: 3px solid #f87171;
+  padding: 8px 10px;
+  border-radius: 4px;
+}

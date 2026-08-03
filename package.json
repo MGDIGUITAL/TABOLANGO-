@@ -1,0 +1,40 @@
+{
+  "name": "tabolango",
+  "version": "1.0.0",
+  "description": "Repor tabolango",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MGDIGUITAL/TABOLANGO-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MGDIGUITAL/TABOLANGO-/issues"
+  },
+  "homepage": "https://github.com/MGDIGUITAL/TABOLANGO-#readme",
+  "dependencies": {
+    "@supabase/server": "^1.4.0",
+    "lucide-react": "^1.24.0",
+    "next": "^15.5.20",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.2",
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.5.3",
+    "postcss": "^8.5.19",
+    "tailwindcss": "^4.3.2",
+    "typescript": "^5.9.3"
+  }
+}
