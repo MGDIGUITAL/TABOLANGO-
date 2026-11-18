@@ -48,6 +48,7 @@ import {
   Loader2,
   Eye,
   TrendingUp,
+  MoreHorizontal,
 } from 'lucide-react'
 import styles from './admin.module.css'
 import { Booking, BlockedDate, InspectionItem, CashTransaction, Client, VisitaRecord, SolicitudFormulario, SolicitudEstado } from '@/types/saas'
@@ -140,6 +141,7 @@ export default function AdminPage() {
 
   // QR Scanner Modal State
   const [qrModalOpen, setQrModalOpen] = useState(false)
+  const [mobileMoreOpen, setMobileMoreOpen] = useState(false)
   const [selectedQrCode, setSelectedQrCode] = useState('TAB-2026-081')
   const [qrScannedBooking, setQrScannedBooking] = useState<Booking | null>(null)
   const [qrCheckInSuccess, setQrCheckInSuccess] = useState(false)
@@ -2789,6 +2791,187 @@ export default function AdminPage() {
                 Registrar Entrada de Visita
               </button>
             </form>
+          </div>
+        </div>
+      )}
+
+      {/* MOBILE BOTTOM NAVIGATION BAR (iOS Native Style) */}
+      <nav className={styles.mobileBottomBar}>
+        <button
+          onClick={() => {
+            setActiveTab('dashboard')
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+          }}
+          className={`${styles.mobileTabBtn} ${activeTab === 'dashboard' ? styles.mobileTabBtnActive : ''}`}
+        >
+          <LayoutDashboard size={20} />
+          <span>Resumen</span>
+        </button>
+
+        <button
+          onClick={() => {
+            setActiveTab('reservas')
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+          }}
+          className={`${styles.mobileTabBtn} ${activeTab === 'reservas' ? styles.mobileTabBtnActive : ''}`}
+        >
+          <CalendarIcon size={20} />
+          <span>Reservas</span>
+        </button>
+
+        {/* Central Prominent QR Action */}
+        <button
+          onClick={handleOpenQrModal}
+          className={styles.mobileQrScanCenter}
+          title="Escanear QR de Entrada"
+        >
+          <QrCode size={24} color="#ECF39E" />
+        </button>
+
+        <button
+          onClick={() => {
+            setActiveTab('solicitudes')
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+          }}
+          className={`${styles.mobileTabBtn} ${activeTab === 'solicitudes' ? styles.mobileTabBtnActive : ''}`}
+        >
+          <MessageCircle size={20} />
+          <span>Solicitudes</span>
+          {solicitudesStats.nuevas > 0 && (
+            <span className={styles.mobileBadge}>{solicitudesStats.nuevas}</span>
+          )}
+        </button>
+
+        <button
+          onClick={() => setMobileMoreOpen(true)}
+          className={`${styles.mobileTabBtn} ${
+            ['checkin', 'caja', 'clientes', 'visitas', 'copiloto', 'calendar', 'api'].includes(activeTab)
+              ? styles.mobileTabBtnActive
+              : ''
+          }`}
+        >
+          <MoreHorizontal size={20} />
+          <span>Más</span>
+        </button>
+      </nav>
+
+      {/* MOBILE "MÁS" BOTTOM SHEET DRAWER */}
+      {mobileMoreOpen && (
+        <div className={styles.sheetOverlay} onClick={() => setMobileMoreOpen(false)}>
+          <div className={styles.sheetContent} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.sheetHandle} />
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+              <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: 800, color: '#1B4332' }}>
+                Módulos del Sistema
+              </h3>
+              <button
+                onClick={() => setMobileMoreOpen(false)}
+                style={{ background: 'none', border: 'none', color: '#64748b', cursor: 'pointer', padding: 4 }}
+              >
+                <X size={20} />
+              </button>
+            </div>
+            <p style={{ margin: '0 0 14px 0', fontSize: '0.8rem', color: '#64748b' }}>
+              Acceso rápido a todas las herramientas administrativas del quincho
+            </p>
+
+            <div className={styles.sheetGrid}>
+              <div
+                className={`${styles.sheetItem} ${activeTab === 'checkin' ? styles.sheetItemActive : ''}`}
+                onClick={() => {
+                  setActiveTab('checkin')
+                  setMobileMoreOpen(false)
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }}
+              >
+                <ClipboardCheck size={22} color={activeTab === 'checkin' ? '#1B4332' : '#52B788'} />
+                <span>Check-in (7 Zonas)</span>
+              </div>
+
+              <div
+                className={`${styles.sheetItem} ${activeTab === 'caja' ? styles.sheetItemActive : ''}`}
+                onClick={() => {
+                  setActiveTab('caja')
+                  setMobileMoreOpen(false)
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }}
+              >
+                <Wallet size={22} color={activeTab === 'caja' ? '#1B4332' : '#52B788'} />
+                <span>Caja & Finanzas</span>
+              </div>
+
+              <div
+                className={`${styles.sheetItem} ${activeTab === 'clientes' ? styles.sheetItemActive : ''}`}
+                onClick={() => {
+                  setActiveTab('clientes')
+                  setMobileMoreOpen(false)
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }}
+              >
+                <Users size={22} color={activeTab === 'clientes' ? '#1B4332' : '#52B788'} />
+                <span>Huéspedes</span>
+              </div>
+
+              <div
+                className={`${styles.sheetItem} ${activeTab === 'visitas' ? styles.sheetItemActive : ''}`}
+                onClick={() => {
+                  setActiveTab('visitas')
+                  setMobileMoreOpen(false)
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }}
+              >
+                <Eye size={22} color={activeTab === 'visitas' ? '#1B4332' : '#52B788'} />
+                <span>Control Visitas</span>
+              </div>
+
+              <div
+                className={`${styles.sheetItem} ${activeTab === 'copiloto' ? styles.sheetItemActive : ''}`}
+                onClick={() => {
+                  setActiveTab('copiloto')
+                  setMobileMoreOpen(false)
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }}
+              >
+                <Bot size={22} color={activeTab === 'copiloto' ? '#1B4332' : '#52B788'} />
+                <span>Copiloto IA</span>
+              </div>
+
+              <div
+                className={`${styles.sheetItem} ${activeTab === 'calendar' ? styles.sheetItemActive : ''}`}
+                onClick={() => {
+                  setActiveTab('calendar')
+                  setMobileMoreOpen(false)
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }}
+              >
+                <CalendarDays size={22} color={activeTab === 'calendar' ? '#1B4332' : '#52B788'} />
+                <span>Bloqueo Fechas</span>
+              </div>
+
+              <div
+                className={`${styles.sheetItem} ${activeTab === 'api' ? styles.sheetItemActive : ''}`}
+                onClick={() => {
+                  setActiveTab('api')
+                  setMobileMoreOpen(false)
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }}
+              >
+                <Smartphone size={22} color={activeTab === 'api' ? '#1B4332' : '#52B788'} />
+                <span>App Móvil & APK</span>
+              </div>
+
+              <div
+                className={styles.sheetItem}
+                style={{ background: '#fef2f2', borderColor: '#fecaca', color: '#b91c1c' }}
+                onClick={() => {
+                  setMobileMoreOpen(false)
+                  handleLogout()
+                }}
+              >
+                <LogOut size={22} color="#dc2626" />
+                <span>Cerrar Sesión</span>
+              </div>
+            </div>
           </div>
         </div>
       )}
