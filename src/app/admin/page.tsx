@@ -2376,26 +2376,48 @@ export default function AdminPage() {
                       <p style={{ margin: '0 0 16px 0', fontSize: '0.85rem', color: '#64748b', lineHeight: 1.4 }}>
                         Instala la app directamente en tu iPhone 12 Pro Max. Se ejecuta a pantalla completa, rápida y con acceso directo a tus reservas y check-in.
                       </p>
-                      <button
-                        onClick={() => alert("📱 En tu iPhone: Pulsa el botón Compartir de Safari (el ícono cuadrado con flecha arriba) y selecciona 'Añadir a la pantalla de inicio'. ¡La app quedará instalada de inmediato sin ninguna cuenta externa!")}
-                        style={{
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: 10,
-                          background: '#0f172a',
-                          color: '#ffffff',
-                          padding: '12px 20px',
-                          borderRadius: '8px',
-                          fontWeight: 700,
-                          fontSize: '0.9rem',
-                          border: 'none',
-                          cursor: 'pointer',
-                          boxShadow: '0 4px 14px rgba(15, 23, 42, 0.3)',
-                        }}
-                      >
-                        <Smartphone size={18} color="#38bdf8" />
-                        Instalar en este iPhone
-                      </button>
+                      
+                      <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                        <a
+                          href="itms-services://?action=download-manifest&url=https://www.quinchotabolango.cl/downloads/manifest.plist"
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: 8,
+                            background: '#0f172a',
+                            color: '#ffffff',
+                            padding: '11px 18px',
+                            borderRadius: '8px',
+                            fontWeight: 700,
+                            fontSize: '0.88rem',
+                            textDecoration: 'none',
+                            boxShadow: '0 4px 14px rgba(15, 23, 42, 0.3)',
+                          }}
+                        >
+                          <Smartphone size={17} color="#38bdf8" />
+                          Instalar directo en iPhone (OTA)
+                        </a>
+
+                        <a
+                          href="/downloads/TabolangoAdmin.ipa"
+                          download="TabolangoAdmin.ipa"
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: 8,
+                            background: '#334155',
+                            color: '#ffffff',
+                            padding: '11px 18px',
+                            borderRadius: '8px',
+                            fontWeight: 700,
+                            fontSize: '0.88rem',
+                            textDecoration: 'none',
+                          }}
+                        >
+                          <Download size={17} color="#ECF39E" />
+                          Descargar archivo .IPA
+                        </a>
+                      </div>
                     </div>
                   </div>
 
