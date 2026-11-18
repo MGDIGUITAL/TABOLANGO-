@@ -14,11 +14,11 @@ interface Message {
 const KB: Record<string, { keys: string[]; reply: string; action?: string }> = {
   precios: {
     keys: ['precio', 'precios', 'tarifa', 'tarifas', 'cuanto', 'cuánto', 'cuesta', 'valor', 'jornada', 'costo'],
-    reply: `Nuestras tarifas oficiales en Quincho Limache 🌿:\n\n☀️ Jornada Diurna (09:00 - 19:00): $120.000 (Base 50 personas)\n🌙 Jornada Nocturna (20:00 - 02:00): $160.000\n👥 Persona Adicional (>50 pers.): $5.000 p/p\n♨️ Tinaja de Agua Caliente: $35.000 (3 hrs) / $50.000 (5 hrs)\n🛡️ Garantía Reembolsable: $30.000\n\n¿Te gustaría cotizar para una fecha en particular?`,
+    reply: `Nuestras tarifas oficiales en Quincho Tabolango 🌿:\n\n☀️ Jornada Diurna (09:00 - 19:00): $120.000 (Base 50 personas)\n🌙 Jornada Nocturna (20:00 - 02:00): $160.000\n👥 Persona Adicional (>50 pers.): $5.000 p/p\n♨️ Tinaja de Agua Caliente: $35.000 (3 hrs) / $50.000 (5 hrs)\n🛡️ Garantía Reembolsable: $30.000\n\n¿Te gustaría cotizar para una fecha en particular?`,
   },
   reglas: {
     keys: ['reglas', 'regla', 'norma', 'normas', 'musica', 'música', 'parlante', 'parlantes', 'sonido', 'volumen', 'condiciones'],
-    reply: `Para cuidar la tranquilidad de nuestro entorno rural y vecinos 🌿:\n\n• 🔇 Parlantes externos: PROHIBIDOS parlantes o amplificadores propios. El quincho cuenta con un equipo de sonido pre-instalado a volumen moderado.\n• 🧹 Aseo: Se debe dejar el recinto ordenado y depositar la basura en contenedores.\n• 🛡️ Garantía: $30.000 (reembolsables tras revisar el recinto).\n• ⏱️ Horario Check-in: 14:00 hrs | Check-out: 12:00 hrs (Mediodía).`,
+    reply: `Reglas y condiciones de Quincho Tabolango 🌿:\n\n📅 RESERVAS: Deben realizarse con antelación y requieren un pago inicial para confirmar. Cancelaciones con menos de 7 días de anticipación no serán reembolsadas.\n\n🎵 EQUIPO DE MÚSICA: Está PROHIBIDO el ingreso de parlantes externos, sistemas de sonido y amplificadores. Solo se permite el sistema de sonido interno pre-instalado a volumen moderado.\n\n🗑️ MANEJO DE RESIDUOS: Los usuarios son responsables de recolectar y depositar todos los residuos en los contenedores designados. El quincho debe dejarse limpio y ordenado, libre de basura.\n\n🛡️ DEPÓSITO DE SEGURIDAD: Se requiere un depósito reembolsable ($30.000) antes del uso de las instalaciones. Se retendrá si se detectan daños a la propiedad o incumplimiento de normas de limpieza.\n\n⏰ HORARIOS: Ingreso (Check-in) a las 14:00 hrs | Salida (Check-out) a las 12:00 hrs (Mediodía). El ingreso anticipado o salida tarde están sujetos a disponibilidad (coordinar con anticipación).`,
   },
   reserva: {
     keys: ['reserva', 'reservar', 'abonar', 'abono', 'pago', 'cancelacion', 'cancelación'],
@@ -26,15 +26,15 @@ const KB: Record<string, { keys: string[]; reply: string; action?: string }> = {
   },
   piscina: {
     keys: ['piscina', 'tinaja', 'agua caliente', 'solarium', 'reposera', 'nadar', 'bañarse'],
-    reply: `En Quincho Limache contamos con una amplia piscina privada rodeada de césped natural y reposeras, además de una relajante tinaja de agua caliente al aire libre ($35.000 por 3 hrs / $50.000 por 5 hrs).\n\n¿Te gustaría consultar disponibilidad para alguna fecha?`,
+    reply: `En Quincho Tabolango contamos con una amplia piscina privada rodeada de césped natural y reposeras, además de una relajante tinaja de agua caliente al aire libre ($35.000 por 3 hrs / $50.000 por 5 hrs).\n\n¿Te gustaría consultar disponibilidad para alguna fecha?`,
   },
   quincho: {
     keys: ['quincho', 'parrilla', 'asado', 'bar', 'cocina', 'mesones', 'equipada', 'nevera', 'refrigerador', 'leña'],
     reply: `Nuestro quincho techado está completamente equipado con parrilla rústica, mesones de madera, zona de bar, cocina, refrigerador y congelador. También contamos con sacos de leña a $10.000.\n\n¡Todo listo para disfrutar en familia!`,
   },
   ubicacion: {
-    keys: ['donde', 'dónde', 'ubicacion', 'ubicación', 'llegar', 'direccion', 'dirección', 'limache', 'tabolango'],
-    reply: `Estamos ubicados en Tabolango, Limache (Región de Valparaíso), en un entorno rural tranquilo. Contamos con estacionamiento privado dentro del recinto y control de acceso vehicular.\n\n¿Deseas que te enviemos la ubicación exacta por WhatsApp?`,
+    keys: ['donde', 'dónde', 'ubicacion', 'ubicación', 'llegar', 'direccion', 'dirección', 'limache', 'tabolango', 'km', 'kilometro', 'kilómetro'],
+    reply: `📍 Nos encontramos en:\n\nKilómetro 9, Tabolango, Limache (Región de Valparaíso)\n\nEstamos en un entorno rural tranquilo. Contamos con estacionamiento privado dentro del recinto y control de acceso vehicular.\n\n¿Deseas que te enviemos la ubicación exacta por WhatsApp?`,
   },
   cotizar: {
     keys: ['cotizar', 'agendar', 'disponibilidad', 'fecha', 'contactar', 'whatsapp'],
@@ -43,15 +43,15 @@ const KB: Record<string, { keys: string[]; reply: string; action?: string }> = {
   },
   saludo: {
     keys: ['hola', 'buenas', 'buenos dias', 'buenas tardes', 'buenas noches', 'saludos', 'hola!'],
-    reply: `¡Hola! Bienvenid@ a Quincho Limache 🌿. Soy Constanza, tu anfitriona virtual.\n\n¿En qué te puedo orientar hoy? Puedes preguntarme por las tarifas, reglas del recinto, piscina, tinaja o reservar tu fecha.`,
+    reply: `¡Hola! Bienvenid@ a Quincho Tabolango 🌿. Soy Constanza, tu anfitriona virtual.\n\n¿En qué te puedo orientar hoy? Puedes preguntarme por las tarifas, reglas del recinto, piscina, tinaja o reservar tu fecha.`,
   },
   gracias: {
     keys: ['gracias', 'muchas gracias', 'excelente', 'genial', 'perfecto'],
-    reply: `¡Un placer atenderte! En Quincho Limache estamos para brindarte la mejor experiencia junto a tu familia. 🌿`,
+    reply: `¡Un placer atenderte! En Quincho Tabolango estamos para brindarte la mejor experiencia junto a tu familia. 🌿`,
   },
   default: {
     keys: [],
-    reply: `En Quincho Limache contamos con arriendo por jornada diurna ($120.000) y nocturna ($160.000), piscina privada, tinaja y quincho completo en Tabolango, Limache.\n\n¿Qué consulta tienes sobre las instalaciones, valores o reglas del recinto?`,
+    reply: `En Quincho Tabolango contamos con arriendo por jornada diurna ($120.000) y nocturna ($160.000), piscina privada, tinaja y quincho completo en Tabolango, Limache.\n\n¿Qué consulta tienes sobre las instalaciones, valores o reglas del recinto?`,
   },
 }
 
@@ -92,7 +92,7 @@ export default function SalesAgent() {
     if (nextState && !started) {
       setStarted(true)
       const welcomeMsg =
-        '¡Hola! Bienvenid@ a Quincho Limache 🌿. Soy Constanza, tu anfitriona virtual.\n\n¿En qué te puedo orientar hoy? Puedes preguntarme por las tarifas, reglas del recinto, piscina, tinaja o cotizar una fecha para tu evento.'
+        '¡Hola! Bienvenid@ a Quincho Tabolango 🌿. Soy Constanza, tu anfitriona virtual.\n\n¿En qué te puedo orientar hoy? Puedes preguntarme por las tarifas, reglas del recinto, piscina, tinaja o cotizar una fecha para tu evento.'
       setMessages([{ role: 'assistant', content: welcomeMsg }])
     }
   }
@@ -151,7 +151,7 @@ export default function SalesAgent() {
     if (!leadName || !leadPhone) return
 
     const waMsg = encodeURIComponent(
-      `Hola Constanza, soy ${leadName} (${leadPhone}). Me gustaría cotizar y consultar disponibilidad para Quincho Limache.`
+      `Hola Constanza, soy ${leadName} (${leadPhone}). Me gustaría cotizar y consultar disponibilidad para Quincho Tabolango.`
     )
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${waMsg}`, '_blank')
     setShowLeadForm(false)
@@ -171,7 +171,7 @@ export default function SalesAgent() {
         type="button"
         onClick={handleOpenToggle}
         className={styles.bubble}
-        aria-label="Asistente Virtual Quincho Limache"
+        aria-label="Asistente Virtual Quincho Tabolango"
       >
         <span className={styles.tooltip}>Anfitriona IA</span>
         <span className={styles.onlineDot} />
@@ -185,7 +185,7 @@ export default function SalesAgent() {
           <div className={styles.header}>
             <div className={styles.avatar}>QL</div>
             <div className={styles.headerInfo}>
-              <div className={styles.headerTitle}>Constanza · Quincho Limache</div>
+              <div className={styles.headerTitle}>Constanza · Quincho Tabolango</div>
               <div className={styles.headerStatus}>
                 <span className={styles.greenPulse} />
                 En línea · Respuesta inmediata

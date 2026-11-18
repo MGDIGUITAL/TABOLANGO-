@@ -3,15 +3,13 @@ import styles from './Galeria.module.css'
 import ScrollReveal from './ScrollReveal'
 
 const GALLERY_IMAGES = [
+  '/espacios/nuevo-hero/1.png',
   '/espacios/area-comun/LIVING Y COMERDOR.png',
   '/espacios/areas-verdes/1.png',
   '/espacios/areas-verdes/2.png',
   '/espacios/areas-verdes/3.png',
-  '/espacios/areas-verdes/4.png',
   '/espacios/cocina/1.png',
   '/espacios/bano/1.png',
-  '/espacios/nuevo-hero/1.png',
-  '/espacios/nuevo-hero/2.png',
   '/espacios/nuevo-hero/3.png',
   '/espacios/nuevo-hero/4.png',
   '/espacios/nuevo-hero/5.png',

@@ -2,18 +2,16 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { MessageCircle, Menu, X } from 'lucide-react'
+import Link from 'next/link'
+import { Calendar, UserCheck, Menu, X, ShieldCheck, User } from 'lucide-react'
 import styles from './Nav.module.css'
 
-const WHATSAPP_URL =
-  'https://wa.me/56912345678?text=Hola,%20quiero%20cotizar%20un%20evento%20en%20Quincho%20Limache'
-
 const NAV_LINKS = [
-  { label: 'Nosotros', href: '#nosotros' },
-  { label: 'Instalaciones', href: '#instalaciones' },
-  { label: 'Galería', href: '#galeria' },
-  { label: 'Clientes', href: '#clientes' },
-  { label: 'Precios', href: '#precios' },
+  { label: 'Nosotros', href: '/#nosotros' },
+  { label: 'Instalaciones', href: '/#instalaciones' },
+  { label: 'Galería', href: '/#galeria' },
+  { label: 'Clientes', href: '/#clientes' },
+  { label: 'Precios', href: '/#precios' },
 ] as const
 
 export default function Nav() {
@@ -21,7 +19,7 @@ export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50)
+    const handleScroll = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -29,10 +27,10 @@ export default function Nav() {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`} id="inicio">
       <div className={styles.container}>
-        <a href="#inicio" className={styles.logoLink} aria-label="Quincho Limache Inicio">
+        <Link href="/" className={styles.logoLink} aria-label="Quincho Tabolango Inicio">
           <Image
             src="/logo.png"
-            alt="Quincho Limache Logo"
+            alt="Quincho Tabolango Logo"
             width={160}
             height={160}
             priority
@@ -40,9 +38,9 @@ export default function Nav() {
           />
           <div className={styles.logoTextGroup}>
             <span className={styles.logoBrand}>Quincho</span>
-            <span className={styles.logoNumber}>Limache</span>
+            <span className={styles.logoNumber}>Tabolango</span>
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Links */}
         <ul className={styles.links}>
@@ -53,20 +51,46 @@ export default function Nav() {
               </a>
             </li>
           ))}
+          <li>
+            <Link
+              href="/mi-reserva"
+              className={styles.link}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: 5, whiteSpace: 'nowrap' }}
+            >
+              <UserCheck size={15} /> Mi Reserva
+            </Link>
+          </li>
         </ul>
 
         {/* Right Action Group */}
         <div className={styles.rightGroup}>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/reservar"
             className={`btn btn-md btn-primary ${styles.ctaBtn}`}
-            id="nav-cta-cotizar"
+            id="nav-cta-reservar"
+            style={{
+              textDecoration: 'none',
+              background: 'linear-gradient(135deg, #ECF39E 0%, #90A955 100%)',
+              color: '#1B2918',
+              fontWeight: 700,
+              boxShadow: '0 4px 14px rgba(144, 169, 85, 0.3)',
+            }}
           >
-            <MessageCircle size={16} />
-            <span>Cotizar</span>
-          </a>
+            <Calendar size={16} />
+            <span>Reservar Online</span>
+          </Link>
+
+          {/* Icono de Usuario para Ingreso al Sistema SaaS */}
+          <Link
+            href="/admin"
+            className={styles.userAdminBtn}
+            title="Ingreso al Sistema SaaS (Administración)"
+            aria-label="Ingreso al Sistema SaaS"
+            id="nav-user-admin"
+          >
+            <User size={18} />
+            <span className={styles.userStatusDot} />
+          </Link>
 
           {/* Mobile Hamburger Toggle Button */}
           <button
@@ -96,16 +120,40 @@ export default function Nav() {
               </li>
             ))}
             <li>
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/mi-reserva"
+                className={styles.mobileLink}
+                onClick={() => setMobileMenuOpen(false)}
+                style={{ color: '#ECF39E', display: 'flex', alignItems: 'center', gap: 8 }}
+              >
+                <UserCheck size={18} /> Mi Reserva & Check-in Digital
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/admin"
+                className={styles.mobileLink}
+                onClick={() => setMobileMenuOpen(false)}
+                style={{ color: '#ECF39E', display: 'flex', alignItems: 'center', gap: 8, fontWeight: 700 }}
+              >
+                <User size={18} /> Ingreso al Sistema SaaS (Admin)
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/reservar"
                 className={styles.mobileCtaBtn}
                 onClick={() => setMobileMenuOpen(false)}
+                style={{
+                  textDecoration: 'none',
+                  background: 'linear-gradient(135deg, #ECF39E 0%, #90A955 100%)',
+                  color: '#1B2918',
+                  fontWeight: 800,
+                }}
               >
-                <MessageCircle size={18} />
-                Cotizar por WhatsApp
-              </a>
+                <Calendar size={18} />
+                Reservar Estadía Online
+              </Link>
             </li>
           </ul>
         </div>

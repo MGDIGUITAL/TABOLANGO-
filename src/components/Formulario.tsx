@@ -19,7 +19,7 @@ const WHATSAPP_NUMBER = '56912345678'
 
 function buildWhatsAppUrl(data: CotizacionData): string {
   const message = encodeURIComponent(
-    `Hola, quiero cotizar un evento en Quincho Limache.\n\n` +
+    `Hola, quiero cotizar un evento en Quincho Tabolango.\n\n` +
       `📋 *Datos del evento:*\n` +
       `• Nombre: ${data.nombre}\n` +
       `• Teléfono: ${data.telefono}\n` +
@@ -35,6 +35,7 @@ function buildWhatsAppUrl(data: CotizacionData): string {
 export default function Formulario() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [ticketId, setTicketId] = useState<string | null>(null)
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -53,12 +54,39 @@ export default function Formulario() {
     }
 
     try {
-      const result = await enviarCotizacion(data)
-      if (result.success) {
+      // 1. Guardar en el sistema SaaS unificado
+      const res = await fetch('/api/v1/solicitudes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre: data.nombre,
+          telefono: data.telefono,
+          correo: data.correo,
+          fechaEvento: data.fecha_evento,
+          personas: data.cantidad_personas,
+          tipoEvento: data.tipo_evento,
+          mensaje: data.mensaje,
+          origen: 'formulario_web',
+        }),
+      })
+
+      const json = await res.json()
+      if (json.success) {
+        setTicketId(json.data?.id || 'SOL-2026')
         setSubmitStatus('success')
-        window.open(buildWhatsAppUrl(data), '_blank')
+        // Opcional: abre WhatsApp con mensaje pre-armado
+        setTimeout(() => {
+          window.open(buildWhatsAppUrl(data), '_blank')
+        }, 800)
       } else {
-        setSubmitStatus('error')
+        // Fallback a action legacy si fuese necesario
+        const result = await enviarCotizacion(data)
+        if (result.success) {
+          setSubmitStatus('success')
+          window.open(buildWhatsAppUrl(data), '_blank')
+        } else {
+          setSubmitStatus('error')
+        }
       }
     } catch {
       setSubmitStatus('error')
@@ -126,7 +154,9 @@ export default function Formulario() {
             </div>
 
             {submitStatus === 'success' && (
-              <div className={styles.success}>Reserva enviada. Te redirigimos a WhatsApp...</div>
+              <div className={styles.success}>
+                ✓ ¡Solicitud {ticketId ? `#${ticketId}` : ''} registrada con éxito! Conectando con la administración...
+              </div>
             )}
             {submitStatus === 'error' && (
               <div className={styles.error}>Hubo un error. Por favor intenta más tarde.</div>

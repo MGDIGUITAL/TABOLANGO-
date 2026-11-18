@@ -97,7 +97,7 @@ export default function NuestroEspacio() {
               El equilibrio perfecto entre diseño y naturaleza
             </h2>
             <p className="section-subtitle">
-              Quincho Limache fue concebido para quienes buscan exclusividad. Cada detalle arquitectónico se integra con el paisaje, creando el ambiente ideal para celebraciones privadas y descanso absoluto.
+              Quincho Tabolango fue concebido para quienes buscan exclusividad. Cada detalle arquitectónico se integra con el paisaje, creando el ambiente ideal para celebraciones privadas y descanso absoluto.
             </p>
 
             <ul className={styles.features}>

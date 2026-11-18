@@ -6,7 +6,7 @@
 }
 
 .header {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 .headerInner {
@@ -70,4 +70,28 @@
 
 .mapWrapper:hover iframe {
   filter: none;
+}
+
+.addressRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  padding: 10px 16px;
+  background: rgba(236, 243, 158, 0.08);
+  border: 1px solid rgba(236, 243, 158, 0.2);
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.addressIcon {
+  color: #ECF39E;
+  flex-shrink: 0;
+}
+
+.addressText {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.85);
+  font-family: var(--font-body);
+  letter-spacing: 0.02em;
 }

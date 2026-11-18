@@ -62,7 +62,7 @@ export default function Clientes() {
             <span className="section-label">Comunidad & Vivencias</span>
             <h2 className="section-title">Experiencias de Nuestros Clientes</h2>
             <p className="section-subtitle">
-              Momentos auténticos capturados por las familias y grupos que eligen Quincho Limache para desconectarse y celebrar.
+              Momentos auténticos capturados por las familias y grupos que eligen Quincho Tabolango para desconectarse y celebrar.
             </p>
           </div>
         </ScrollReveal>

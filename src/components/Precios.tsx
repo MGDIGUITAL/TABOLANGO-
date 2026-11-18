@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { Plus, Clock, ShieldAlert, CheckCircle2, ChevronDown, Sparkles } from 'lucide-react'
+import Link from 'next/link'
+import { Plus, Clock, ShieldAlert, CheckCircle2, ChevronDown, Sparkles, Calendar, ArrowRight } from 'lucide-react'
 import styles from './Precios.module.css'
 import ScrollReveal from './ScrollReveal'
 
@@ -36,9 +37,9 @@ export default function Precios() {
         <ScrollReveal>
           <div className={styles.header}>
             <span className="section-label">Tarifas Oficiales</span>
-            <h2 className="section-title">Valores Temporada Baja 2026</h2>
+            <h2 className="section-title">Valores Temporada 2026</h2>
             <p className="section-subtitle">
-              En días festivos o fines de semana largos se mantiene el valor publicado.
+              En días festivos o fines de semana largos se mantiene el valor publicado. Reserva directa con 50% de abono.
             </p>
           </div>
         </ScrollReveal>
@@ -54,6 +55,26 @@ export default function Precios() {
                   <span className={styles.unit}>{item.unit}</span>
                 </div>
                 <p className={styles.cardDetail}>{item.detail}</p>
+                <div style={{ marginTop: 20 }}>
+                  <Link
+                    href="/reservar"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: 6,
+                      background: 'var(--color-primary)',
+                      color: '#ffffff',
+                      textDecoration: 'none',
+                      padding: '10px 20px',
+                      borderRadius: 'var(--radius-full)',
+                      fontWeight: 700,
+                      fontSize: '0.88rem',
+                      transition: 'all 0.2s',
+                    }}
+                  >
+                    <Calendar size={15} /> Reservar esta opción <ArrowRight size={14} />
+                  </Link>
+                </div>
               </div>
             </ScrollReveal>
           ))}
@@ -129,13 +150,13 @@ export default function Precios() {
                       <strong>Equipos de música:</strong> PROHIBIDO el ingreso de equipos de música externos o parlantes portátiles. El lugar cuenta con equipo apto a volumen moderado. El incumplimiento procederá al desalojo.
                     </li>
                     <li>
-                      <strong>Garantía:</strong> Se deja garantía de $30.000 en efectivo por concepto de limpieza o daños (se devuelve tras la inspección 5 min antes de la salida).
+                      <strong>Garantía:</strong> Se deja garantía de $30.000 en efectivo o transferencia por concepto de limpieza o daños (se devuelve tras la inspección 5 min antes de la salida).
                     </li>
                     <li>
-                      <strong>Manejo de residuos:</strong> Al ser zona rural sin retiro de aseo domiciliario, los visitantes deben llevar la basura de vuelta a sus hogares o depositarla en contenedores.
+                      <strong>Manejo de residuos:</strong> Al ser zona rural sin retiro de aseo domiciliario, los visitantes deben llevar la basura de vuelta a sus hogares o depositarla en contenedores habilitados.
                     </li>
                     <li>
-                      <strong>Tinaja de agua caliente:</strong> Solicitar y reservar junto con el hospedaje, informando día y horario de inicio para su preparación previa.
+                      <strong>Tinaja de agua caliente:</strong> Solicitar y reservar junto con el hospedaje, informando día y horario de inicio para su preparación previa con leña.
                     </li>
                   </ul>
                 </div>

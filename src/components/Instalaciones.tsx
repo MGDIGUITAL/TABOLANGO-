@@ -26,7 +26,7 @@ const FACILITIES = [
   },
   {
     title: 'Entorno & Terrazas',
-    image: '/espacios/areas-verdes/4.png',
+    image: '/images/entorno-terrazas.png',
     desc: 'Espacios al aire libre diseñados para el descanso y la desconexión.',
   },
 ] as const

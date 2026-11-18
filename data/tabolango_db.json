@@ -1,0 +1,659 @@
+{
+  "settings": {
+    "name": "Quincho Tabolango",
+    "address": "Km 9, Tabolango, Limache, Región de Valparaíso",
+    "phone": "56912345678",
+    "email": "contacto@quinchotabolango.cl",
+    "baseRateMin2Nights": 90000,
+    "baseRateSingleWeekendNight": 110000,
+    "baseGuestsIncluded": 8,
+    "maxGuests": 10,
+    "extraGuestPrice": 8000,
+    "hotTubPrice": 50000,
+    "extraHourPrice": 5000,
+    "guaranteePrice": 30000,
+    "depositPercentage": 50,
+    "checkInTime": "14:00",
+    "checkOutTime": "12:00"
+  },
+  "blockedDates": [
+    {
+      "id": "block-1",
+      "date": "2026-11-20",
+      "reason": "Mantención",
+      "createdAt": "2026-11-01T10:00:00Z"
+    },
+    {
+      "id": "block-2",
+      "date": "2026-12-25",
+      "reason": "Festivo",
+      "createdAt": "2026-11-01T10:00:00Z"
+    },
+    {
+      "id": "block-3",
+      "date": "2026-12-31",
+      "reason": "Festivo",
+      "createdAt": "2026-11-01T10:00:00Z"
+    },
+    {
+      "id": "block-4",
+      "date": "2026-01-01",
+      "reason": "Festivo",
+      "createdAt": "2026-11-01T10:00:00Z"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "TAB-2026-086",
+      "clientName": "Rodrigo Pérez",
+      "clientEmail": "rodrigo.perez@live.cl",
+      "clientPhone": "+56998877665",
+      "clientRut": "14.567.890-2",
+      "checkInDate": "2027-01-16",
+      "checkOutDate": "2027-01-17",
+      "nightsCount": 1,
+      "guestsCount": 10,
+      "extraGuests": 2,
+      "eventType": "Paseo verano familiar",
+      "includeHotTub": true,
+      "extraHours": 1,
+      "ratePerNight": 110000,
+      "totalAmount": 181000,
+      "depositRequired": 90500,
+      "depositPaid": true,
+      "depositPaidAt": "2026-11-15T10:00:00Z",
+      "balancePaid": false,
+      "guaranteeAmount": 30000,
+      "guaranteeStatus": "pending",
+      "status": "confirmed",
+      "vehiclePlate": "LK-9012",
+      "vehiclesCount": 2,
+      "vehiclePlates": [
+        "LK-9012",
+        "GG-7744"
+      ],
+      "createdAt": "2026-11-15T09:40:00Z"
+    },
+    {
+      "id": "TAB-2026-085",
+      "clientName": "Valeria Muñoz",
+      "clientEmail": "valeria.m@outlook.com",
+      "clientPhone": "+56976543210",
+      "clientRut": "17.890.123-4",
+      "checkInDate": "2026-12-12",
+      "checkOutDate": "2026-12-13",
+      "nightsCount": 1,
+      "guestsCount": 8,
+      "extraGuests": 0,
+      "eventType": "Cumpleaños",
+      "includeHotTub": true,
+      "extraHours": 0,
+      "ratePerNight": 110000,
+      "totalAmount": 160000,
+      "depositRequired": 80000,
+      "depositPaid": true,
+      "depositPaidAt": "2026-11-14T18:20:00Z",
+      "balancePaid": false,
+      "guaranteeAmount": 30000,
+      "guaranteeStatus": "pending",
+      "status": "confirmed",
+      "vehiclePlate": "RT-5521",
+      "vehiclesCount": 1,
+      "vehiclePlates": [
+        "RT-5521"
+      ],
+      "createdAt": "2026-11-14T17:50:00Z"
+    },
+    {
+      "id": "TAB-2026-084",
+      "clientName": "Marcelo Castro",
+      "clientEmail": "marcelo.castro@gmail.com",
+      "clientPhone": "+56983344556",
+      "clientRut": "15.654.321-8",
+      "checkInDate": "2026-11-15",
+      "checkOutDate": "2026-11-16",
+      "nightsCount": 1,
+      "guestsCount": 9,
+      "extraGuests": 1,
+      "eventType": "Asado amigos",
+      "includeHotTub": true,
+      "extraHours": 0,
+      "ratePerNight": 110000,
+      "totalAmount": 168000,
+      "depositRequired": 84000,
+      "depositPaid": true,
+      "depositPaidAt": "2026-11-05T14:00:00Z",
+      "balancePaid": true,
+      "guaranteeAmount": 30000,
+      "guaranteeStatus": "refunded",
+      "status": "completed",
+      "vehiclePlate": "DF-3344",
+      "vehiclesCount": 2,
+      "vehiclePlates": [
+        "DF-3344",
+        "KJ-1199"
+      ],
+      "createdAt": "2026-11-05T12:00:00Z"
+    },
+    {
+      "id": "TAB-2026-082",
+      "clientName": "Ignacio Fuentes",
+      "clientEmail": "ifuentes@empresa.cl",
+      "clientPhone": "+56991234567",
+      "clientRut": "16.321.456-K",
+      "checkInDate": "2026-11-20",
+      "checkOutDate": "2026-11-21",
+      "nightsCount": 1,
+      "guestsCount": 8,
+      "extraGuests": 0,
+      "eventType": "Jornada descanso",
+      "includeHotTub": false,
+      "extraHours": 0,
+      "ratePerNight": 110000,
+      "totalAmount": 110000,
+      "depositRequired": 55000,
+      "depositPaid": true,
+      "depositPaidAt": "2026-11-12T10:00:00Z",
+      "balancePaid": true,
+      "balancePaidAt": "2026-11-20T14:15:00Z",
+      "guaranteeAmount": 30000,
+      "guaranteeStatus": "received",
+      "status": "checked_in",
+      "vehiclePlate": "PBYR-94",
+      "vehiclesCount": 2,
+      "vehiclePlates": [
+        "PBYR-94",
+        "HGBB-11"
+      ],
+      "notes": "Check-in realizado en portón a las 14:15 hrs.",
+      "createdAt": "2026-11-12T09:30:00Z"
+    },
+    {
+      "id": "TAB-2026-081",
+      "clientName": "Constanza Valenzuela",
+      "clientEmail": "constanza.v@gmail.com",
+      "clientPhone": "+56987654321",
+      "clientRut": "18.423.901-5",
+      "checkInDate": "2026-11-21",
+      "checkOutDate": "2026-11-22",
+      "nightsCount": 1,
+      "guestsCount": 10,
+      "extraGuests": 2,
+      "eventType": "Cumpleaños familiar",
+      "includeHotTub": true,
+      "extraHours": 0,
+      "ratePerNight": 110000,
+      "totalAmount": 181000,
+      "depositRequired": 90500,
+      "depositPaid": true,
+      "depositPaidAt": "2026-11-10T12:00:00Z",
+      "balancePaid": false,
+      "guaranteeAmount": 30000,
+      "guaranteeStatus": "pending",
+      "status": "checked_in",
+      "vehiclePlate": "KZ-8821",
+      "vehiclesCount": 1,
+      "vehiclePlates": [
+        "KZ-8821"
+      ],
+      "notes": "Solicitó tinaja encendida para las 18:30 hrs.",
+      "createdAt": "2026-11-10T11:45:00Z",
+      "checkin": {
+        "bookingId": "TAB-2026-081",
+        "vehiclesCount": 1,
+        "vehiclePlates": [
+          "KZ-8821"
+        ],
+        "estimatedArrival": "14:00",
+        "guestList": [],
+        "rulesAccepted": true,
+        "rulesAcceptedAt": "2026-11-18T00:05:35.635Z",
+        "checkedInAt": "2026-11-18T00:05:35.635Z",
+        "notes": ""
+      },
+      "tickets": [
+        {
+          "id": "TCK-2026-081",
+          "bookingId": "TAB-2026-081",
+          "type": "mantenimiento_previo",
+          "title": "Ticket #TCK-2026-081 - Previo a Llegada",
+          "operatorName": "Pedro Salinas",
+          "createdAt": "2026-11-17T11:00:00Z",
+          "status": "aprobado",
+          "items": [
+            {
+              "id": "piezas",
+              "label": "Piezas / Dormitorios",
+              "category": "habitaciones",
+              "status": "ok"
+            },
+            {
+              "id": "banos",
+              "label": "Baños & Agua Caliente",
+              "category": "instalaciones",
+              "status": "ok"
+            },
+            {
+              "id": "cocina",
+              "label": "Cocina & Vajilla",
+              "category": "instalaciones",
+              "status": "ok"
+            },
+            {
+              "id": "comedor",
+              "label": "Comedor & Mobiliario",
+              "category": "instalaciones",
+              "status": "ok"
+            },
+            {
+              "id": "piscina",
+              "label": "Piscina & Rejas",
+              "category": "exteriores",
+              "status": "ok"
+            },
+            {
+              "id": "tinaja",
+              "label": "Tinaja & Leña lista",
+              "category": "exteriores",
+              "status": "ok"
+            },
+            {
+              "id": "camas_elasticas",
+              "label": "Camas Elásticas & Mallas",
+              "category": "exteriores",
+              "status": "ok"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAB-2026-4821",
+      "clientName": "Alejandro Morales",
+      "clientEmail": "alejandro.morales@gmail.com",
+      "clientPhone": "+56987654321",
+      "clientRut": "15.482.901-3",
+      "checkInDate": "2026-11-07",
+      "checkOutDate": "2026-11-09",
+      "nightsCount": 2,
+      "guestsCount": 8,
+      "extraGuests": 0,
+      "eventType": "Reunión familiar",
+      "includeHotTub": true,
+      "extraHours": 1,
+      "ratePerNight": 90000,
+      "totalAmount": 235000,
+      "depositRequired": 117500,
+      "depositPaid": true,
+      "depositPaidAt": "2026-11-10T14:20:00Z",
+      "balancePaid": false,
+      "guaranteeAmount": 30000,
+      "guaranteeStatus": "pending",
+      "status": "confirmed",
+      "notes": "Solicitó tinaja encendida para las 19:00 hrs.",
+      "createdAt": "2026-11-10T14:15:00Z",
+      "checkin": {
+        "bookingId": "TAB-2026-4821",
+        "vehiclePlate": "LL-PW-89",
+        "estimatedArrival": "14:30",
+        "guestList": [
+          {
+            "name": "Alejandro Morales",
+            "rutOrDoc": "15.482.901-3",
+            "age": 42
+          },
+          {
+            "name": "Camila Soto",
+            "rutOrDoc": "16.120.304-K",
+            "age": 39
+          },
+          {
+            "name": "Matías Morales",
+            "rutOrDoc": "23.490.112-4",
+            "age": 14
+          },
+          {
+            "name": "Sofía Morales",
+            "rutOrDoc": "25.301.992-1",
+            "age": 9
+          }
+        ],
+        "rulesAccepted": true,
+        "rulesAcceptedAt": "2026-11-15T18:30:00Z"
+      }
+    },
+    {
+      "id": "TAB-2026-5912",
+      "clientName": "Valentina Henríquez",
+      "clientEmail": "v.henriquez@empresa.cl",
+      "clientPhone": "+56991238475",
+      "clientRut": "17.893.201-9",
+      "checkInDate": "2026-11-28",
+      "checkOutDate": "2026-11-29",
+      "nightsCount": 1,
+      "guestsCount": 9,
+      "extraGuests": 1,
+      "eventType": "Cumpleaños",
+      "includeHotTub": true,
+      "extraHours": 0,
+      "ratePerNight": 110000,
+      "totalAmount": 168000,
+      "depositRequired": 84000,
+      "depositPaid": true,
+      "depositPaidAt": "2026-11-12T11:00:00Z",
+      "balancePaid": false,
+      "guaranteeAmount": 30000,
+      "guaranteeStatus": "pending",
+      "status": "confirmed",
+      "notes": "Llegarán 2 vehículos (coordinar estacionamiento).",
+      "createdAt": "2026-11-12T10:45:00Z"
+    },
+    {
+      "id": "TAB-2026-6204",
+      "clientName": "Ignacio Valdés",
+      "clientEmail": "ignacio.valdes@live.cl",
+      "clientPhone": "+56973342110",
+      "checkInDate": "2026-12-05",
+      "checkOutDate": "2026-12-07",
+      "nightsCount": 2,
+      "guestsCount": 8,
+      "extraGuests": 0,
+      "eventType": "Aniversario",
+      "includeHotTub": false,
+      "extraHours": 0,
+      "ratePerNight": 90000,
+      "totalAmount": 180000,
+      "depositRequired": 90000,
+      "depositPaid": false,
+      "balancePaid": false,
+      "guaranteeAmount": 30000,
+      "guaranteeStatus": "pending",
+      "status": "pending_deposit",
+      "createdAt": "2026-11-16T19:00:00Z"
+    }
+  ],
+  "cashTransactions": [
+    {
+      "id": "TX-101",
+      "date": "2026-11-17 14:15",
+      "type": "ingreso",
+      "category": "saldo_llegada",
+      "description": "Saldo llegada Constanza Valenzuela (Reserva TAB-2026-081)",
+      "amount": 90500,
+      "bookingId": "TAB-2026-081",
+      "receiptNumber": "BOL-0941",
+      "operator": "Administrador"
+    },
+    {
+      "id": "TX-102",
+      "date": "2026-11-17 14:16",
+      "type": "garantia_recibida",
+      "category": "garantia",
+      "description": "Garantía de llaves y recinto Constanza Valenzuela",
+      "amount": 30000,
+      "bookingId": "TAB-2026-081",
+      "receiptNumber": "GAR-081",
+      "operator": "Administrador"
+    },
+    {
+      "id": "TX-103",
+      "date": "2026-11-16 11:30",
+      "type": "ingreso",
+      "category": "abono",
+      "description": "Abono 50% Ignacio Fuentes (Reserva TAB-2026-082)",
+      "amount": 80000,
+      "bookingId": "TAB-2026-082",
+      "receiptNumber": "TRANS-4412",
+      "operator": "Administrador"
+    },
+    {
+      "id": "TX-104",
+      "date": "2026-11-16 14:00",
+      "type": "garantia_recibida",
+      "category": "garantia",
+      "description": "Garantía en custodia Ignacio Fuentes",
+      "amount": 30000,
+      "bookingId": "TAB-2026-082",
+      "receiptNumber": "GAR-082",
+      "operator": "Administrador"
+    },
+    {
+      "id": "TX-105",
+      "date": "2026-11-15 16:40",
+      "type": "gasto",
+      "category": "insumo_limpieza",
+      "description": "Compra de 2 bolsas de leña seca de eucalipto + cloro pastillas",
+      "amount": -18000,
+      "receiptNumber": "FAC-8812",
+      "operator": "Pedro Salinas (Mantención)"
+    },
+    {
+      "id": "TX-106",
+      "date": "2026-11-14 18:20",
+      "type": "ingreso",
+      "category": "abono",
+      "description": "Abono 50% reserva Diciembre Valeria Muñoz",
+      "amount": 70500,
+      "bookingId": "TAB-2026-085",
+      "receiptNumber": "TRANS-9901",
+      "operator": "Administrador"
+    }
+  ],
+  "clients": [
+    {
+      "id": "CLI-01",
+      "name": "Constanza Valenzuela",
+      "rut": "18.423.901-5",
+      "phone": "+56987654321",
+      "email": "constanza.v@gmail.com",
+      "totalVisits": 3,
+      "totalSpent": 320000,
+      "lastBookingDate": "2026-11-21",
+      "notes": "Cliente frecuente, excelente cuidado de las instalaciones."
+    },
+    {
+      "id": "CLI-02",
+      "name": "Ignacio Fuentes",
+      "rut": "16.321.456-K",
+      "phone": "+56991234567",
+      "email": "ifuentes@empresa.cl",
+      "totalVisits": 2,
+      "totalSpent": 280000,
+      "lastBookingDate": "2026-11-20",
+      "notes": "Suele pedir leña adicional para la tinaja."
+    },
+    {
+      "id": "CLI-03",
+      "name": "Marcelo Castro",
+      "rut": "15.654.321-8",
+      "phone": "+56983344556",
+      "email": "marcelo.castro@gmail.com",
+      "totalVisits": 1,
+      "totalSpent": 195000,
+      "lastBookingDate": "2026-11-15"
+    },
+    {
+      "id": "CLI-04",
+      "name": "Valeria Muñoz",
+      "rut": "17.890.123-4",
+      "phone": "+56976543210",
+      "email": "valeria.m@outlook.com",
+      "totalVisits": 1,
+      "totalSpent": 141000,
+      "lastBookingDate": "2026-12-12"
+    },
+    {
+      "id": "CLI-05",
+      "name": "Rodrigo Pérez",
+      "rut": "14.567.890-2",
+      "phone": "+56998877665",
+      "email": "rodrigo.perez@live.cl",
+      "totalVisits": 2,
+      "totalSpent": 340000,
+      "lastBookingDate": "2027-01-16"
+    },
+    {
+      "id": "CLI-06",
+      "name": "Alejandro Morales",
+      "rut": "15.482.901-3",
+      "phone": "+56987654321",
+      "email": "alejandro.morales@gmail.com",
+      "totalVisits": 2,
+      "totalSpent": 235000,
+      "lastBookingDate": "2026-11-21"
+    },
+    {
+      "id": "CLI-2653",
+      "name": "Gonzalo Vald�s",
+      "rut": "Pendiente",
+      "phone": "+56955554433",
+      "email": "gonzalo.valdes@gmail.com",
+      "totalVisits": 0,
+      "totalSpent": 0,
+      "lastBookingDate": "2026-12-19",
+      "notes": "Origen: Solicitud SOL-2026-004 (Cumplea�os)"
+    }
+  ],
+  "visitas": [
+    {
+      "visitorName": "Gas Limache Express",
+      "visitorRut": "",
+      "visitorPhone": "",
+      "peopleCount": 2,
+      "vehiclePlate": "GG-4433",
+      "parkingZone": "Sector A - Sombras Quincho",
+      "entryTime": "2026-11-18 9:18:",
+      "status": "en_recinto",
+      "type": "huesped_reserva",
+      "notes": "",
+      "id": "VIS-2026-7582"
+    },
+    {
+      "id": "VIS-2026-001",
+      "bookingId": "TAB-2026-081",
+      "visitorName": "Constanza Valenzuela (Titular)",
+      "visitorRut": "18.423.901-5",
+      "visitorPhone": "+56987654321",
+      "peopleCount": 10,
+      "vehiclePlate": "KZ-8821",
+      "parkingZone": "Sector A - Sombras Quincho",
+      "entryTime": "2026-11-17 14:15",
+      "status": "en_recinto",
+      "type": "huesped_reserva",
+      "notes": "Ingreso confirmado con 3 vehículos. Tinaja activada."
+    },
+    {
+      "id": "VIS-2026-002",
+      "bookingId": "TAB-2026-081",
+      "visitorName": "Familia Valenzuela (Auto 2)",
+      "peopleCount": 4,
+      "vehiclePlate": "PBYR-94",
+      "parkingZone": "Sector A",
+      "entryTime": "2026-11-17 15:30",
+      "status": "en_recinto",
+      "type": "huesped_reserva"
+    },
+    {
+      "id": "VIS-2026-003",
+      "bookingId": "TAB-2026-082",
+      "visitorName": "Ignacio Fuentes",
+      "visitorRut": "16.321.456-K",
+      "visitorPhone": "+56991234567",
+      "peopleCount": 8,
+      "vehiclePlate": "PBYR-94",
+      "parkingZone": "Sector B - Estacionamiento Principal",
+      "entryTime": "2026-11-16 14:10",
+      "exitTime": "2026-11-17 12:00",
+      "status": "finalizada",
+      "type": "huesped_reserva"
+    },
+    {
+      "id": "VIS-2026-004",
+      "visitorName": "Distribuidora de Leña Seca Don Ramón",
+      "visitorPhone": "+56933445566",
+      "peopleCount": 2,
+      "vehiclePlate": "FD-9901",
+      "parkingZone": "Zona Carga Leñera",
+      "entryTime": "2026-11-17 11:20",
+      "exitTime": "2026-11-17 11:55",
+      "status": "proveedor",
+      "type": "proveedor_servicio",
+      "notes": "Entrega de 4 sacos de leña de eucalipto para caldera."
+    },
+    {
+      "id": "VIS-2026-005",
+      "bookingId": "TAB-2026-084",
+      "visitorName": "Marcelo Castro",
+      "visitorRut": "15.654.321-8",
+      "peopleCount": 9,
+      "vehiclePlate": "DF-3344",
+      "parkingZone": "Sector A",
+      "entryTime": "2026-11-15 14:00",
+      "exitTime": "2026-11-16 12:15",
+      "status": "finalizada",
+      "type": "huesped_reserva"
+    }
+  ],
+  "solicitudes": [
+    {
+      "id": "SOL-2026-004",
+      "nombre": "Gonzalo Valdés",
+      "telefono": "+56955554433",
+      "correo": "gonzalo.valdes@gmail.com",
+      "fechaEvento": "2026-12-19",
+      "personas": 40,
+      "tipoEvento": "Cumpleaños",
+      "mensaje": "Hola, queremos celebrar un cumpleaños familiar con piscina y quincho para 40 personas. ¿Tienen disponibilidad?",
+      "estado": "nueva",
+      "origen": "formulario_web",
+      "createdAt": "2026-11-17T22:39:12Z",
+      "presupuestoEstimado": 120000
+    },
+    {
+      "id": "SOL-2026-001",
+      "nombre": "Camila Sepúlveda Bravo",
+      "telefono": "+56987654321",
+      "correo": "camila.sepulveda@gmail.com",
+      "fechaEvento": "2026-11-28",
+      "personas": 35,
+      "tipoEvento": "Cumpleaños",
+      "mensaje": "Hola! Queremos celebrar el cumpleaños de mi papá. ¿Tienen disponibilidad de tinaja de agua caliente y se puede llevar DJ propio?",
+      "estado": "nueva",
+      "origen": "formulario_web",
+      "createdAt": "2026-11-17T18:45:00Z",
+      "presupuestoEstimado": 120000
+    },
+    {
+      "id": "SOL-2026-002",
+      "nombre": "Rodrigo Araya Méndez",
+      "telefono": "+56976543210",
+      "correo": "r.araya@constructora.cl",
+      "fechaEvento": "2026-12-05",
+      "personas": 55,
+      "tipoEvento": "Evento corporativo",
+      "mensaje": "Buenas tardes, requerimos cotización formal para paseo de fin de año de empresa. Requerimos factura exenta o boleta de honorarios.",
+      "estado": "contactado",
+      "origen": "formulario_web",
+      "createdAt": "2026-11-16T15:20:00Z",
+      "contactadoAt": "2026-11-16T16:00:00Z",
+      "notasInternas": "Contactado vía WhatsApp, enviada cotización formal base 55 personas (.000). Esperando confirmación de gerencia.",
+      "presupuestoEstimado": 145000
+    },
+    {
+      "id": "SOL-2026-003",
+      "nombre": "Marcela Pizarro Guzmán",
+      "telefono": "+56965432109",
+      "correo": "marcela.pizarro@outlook.com",
+      "fechaEvento": "2026-12-12",
+      "personas": 20,
+      "tipoEvento": "Reunión familiar",
+      "mensaje": "Hola, somos una familia con 6 niños pequeños. ¿La piscina cuenta con reja de seguridad perimetral?",
+      "estado": "cotizado",
+      "origen": "formulario_web",
+      "createdAt": "2026-11-15T10:10:00Z",
+      "contactadoAt": "2026-11-15T11:30:00Z",
+      "notasInternas": "Confirmado: piscina con reja perimetral y salvavidas. Le interesó jornada diurna.",
+      "presupuestoEstimado": 120000
+    }
+  ]
+}

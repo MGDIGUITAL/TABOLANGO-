@@ -14,6 +14,11 @@ out/
 .DS_Store
 Thumbs.db
 
-# IDE
+# IDE & build caches
 .vscode/
 .idea/
+*.tsbuildinfo
+
+
+.vercel
+.env*
