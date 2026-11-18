@@ -694,11 +694,32 @@ export default function AdminPage() {
         {/* Sidebar */}
         <aside className={styles.sidebar}>
           <div className={styles.brand}>
-            <ShieldCheck size={28} color="#52B788" />
-            <div>
-              <h2 className={styles.brandTitle}>Tabolango</h2>
-              <span className={styles.brandSub}>SaaS Admin Full-Stack</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              <ShieldCheck size={26} color="#52B788" />
+              <div>
+                <h2 className={styles.brandTitle}>Tabolango</h2>
+                <span className={styles.brandSub}>SaaS Admin Full-Stack</span>
+              </div>
             </div>
+            <button
+              onClick={handleLogout}
+              style={{
+                background: 'rgba(239, 68, 68, 0.18)',
+                color: '#fca5a5',
+                border: '1px solid rgba(239, 68, 68, 0.35)',
+                padding: '6px 12px',
+                borderRadius: '8px',
+                fontSize: '0.78rem',
+                fontWeight: 700,
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 6,
+              }}
+              title="Cerrar Sesión"
+            >
+              <LogOut size={14} /> Salir
+            </button>
           </div>
 
           <ul className={styles.navMenu}>
@@ -799,7 +820,7 @@ export default function AdminPage() {
             </li>
           </ul>
 
-          <div style={{ marginTop: 'auto', paddingTop: 20 }}>
+          <div className={styles.logoutContainer}>
             <button
               onClick={handleLogout}
               className={styles.navItem}
@@ -832,7 +853,7 @@ export default function AdminPage() {
               </p>
             </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            <div className={styles.topBarActions}>
               <button
                 onClick={handleOpenQrModal}
                 style={{
@@ -2267,7 +2288,7 @@ export default function AdminPage() {
 
           {/* TAB 8: API & SYNC */}
           {activeTab === 'api' && (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: 24 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
               {/* Card 1: Descarga Directa APK Android */}
               <div className={styles.cardTable} style={{ border: '2px solid #2d6a4f' }}>
                 <div className={styles.tableHeader} style={{ background: '#1B4332', color: '#ffffff' }}>

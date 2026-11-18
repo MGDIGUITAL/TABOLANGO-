@@ -870,7 +870,260 @@
   transition: background 0.15s;
 }
 
+.logoutContainer {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.topBarActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .aiSendBtn:hover {
   background: #2D6A4F;
+}
+
+/* =========================================================================
+   MOBILE & TABLET RESPONSIVE SYSTEM (iPhone 12 Pro Max & Android Devices)
+   ========================================================================= */
+
+@media (max-width: 860px) {
+  .shell {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* Sticky Horizontal Nav Header for Mobile */
+  .sidebar {
+    width: 100% !important;
+    padding: 10px 14px 8px !important;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #1B2918 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  .brand {
+    padding: 0 0 8px 0 !important;
+    margin-bottom: 8px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .brandTitle {
+    font-size: 1.05rem !important;
+  }
+
+  .brandSub {
+    font-size: 0.68rem !important;
+    display: none;
+  }
+
+  /* Horizontal swipeable pill menu */
+  .navMenu {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding-bottom: 2px !important;
+  }
+
+  .navMenu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navMenu > li {
+    flex-shrink: 0;
+  }
+
+  .navItem {
+    width: auto !important;
+    white-space: nowrap !important;
+    padding: 8px 14px !important;
+    font-size: 0.82rem !important;
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #e2e8f0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
+
+  .navItemActive {
+    background: #52B788 !important;
+    color: #081C15 !important;
+    font-weight: 800 !important;
+  }
+
+  /* Main Content Area */
+  .mainContent {
+    padding: 16px 12px 60px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    padding-bottom: calc(env(safe-area-inset-bottom, 20px) + 30px) !important;
+  }
+
+  /* Top Bar */
+  .topBar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .topBarActions {
+    width: 100% !important;
+    gap: 8px !important;
+    display: flex !important;
+  }
+
+  .topBarActions > button:first-child {
+    flex: 1 !important;
+    justify-content: center !important;
+  }
+
+  .logoutContainer {
+    display: none !important;
+  }
+
+  .pageHeading {
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    color: #0f172a !important;
+    margin: 0 !important;
+    word-break: break-word;
+  }
+
+  /* Weather & Clock Card */
+  .weatherCard {
+    padding: 14px 16px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    border-radius: 14px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .weatherLeft {
+    gap: 12px !important;
+    align-items: center !important;
+  }
+
+  .weatherIconLarge {
+    font-size: 2.2rem !important;
+  }
+
+  .weatherTemp {
+    font-size: 1.8rem !important;
+    font-weight: 800 !important;
+  }
+
+  .weatherDetails {
+    font-size: 0.75rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .weatherRight {
+    text-align: left !important;
+    align-items: flex-start !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+    padding-top: 10px !important;
+    width: 100% !important;
+  }
+
+  .liveClock {
+    font-size: 1.4rem !important;
+  }
+
+  .liveDate {
+    font-size: 0.8rem !important;
+  }
+
+  /* 2-Column Compact KPI Metrics Grid */
+  .kpiGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .kpiCard {
+    padding: 12px 10px !important;
+    border-radius: 12px !important;
+  }
+
+  .kpiValue {
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+  }
+
+  .kpiLabel {
+    font-size: 0.68rem !important;
+    letter-spacing: 0.3px !important;
+  }
+
+  .kpiSub {
+    font-size: 0.68rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Tables & Lists */
+  .cardTable {
+    border-radius: 14px !important;
+    margin-bottom: 20px !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .tableHeader {
+    padding: 12px 14px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+
+  .tableTitle {
+    font-size: 1rem !important;
+  }
+
+  /* Modal responsiveness */
+  .modalOverlay {
+    padding: 10px !important;
+  }
+
+  .modalDialog {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 92vh !important;
+    border-radius: 16px !important;
+    padding: 18px 14px !important;
+    overflow-y: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .kpiGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  .kpiValue {
+    font-size: 1.15rem !important;
+  }
+
+  .pageHeading {
+    font-size: 1.18rem !important;
+  }
 }
 
