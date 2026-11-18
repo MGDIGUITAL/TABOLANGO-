@@ -2268,13 +2268,13 @@ export default function AdminPage() {
           {/* TAB 8: API & SYNC */}
           {activeTab === 'api' && (
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: 24 }}>
-              {/* Card 1: Descarga Directa APK */}
+              {/* Card 1: Descarga Directa APK Android */}
               <div className={styles.cardTable} style={{ border: '2px solid #2d6a4f' }}>
                 <div className={styles.tableHeader} style={{ background: '#1B4332', color: '#ffffff' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                     <Smartphone size={22} color="#ECF39E" />
                     <div>
-                      <h3 style={{ margin: 0, fontSize: '1.05rem', color: '#ffffff' }}>Descarga App Móvil (Android APK)</h3>
+                      <h3 style={{ margin: 0, fontSize: '1.05rem', color: '#ffffff' }}>Android (Instalador APK)</h3>
                       <p style={{ margin: 0, fontSize: '0.78rem', color: '#cbd5e1' }}>Instalación directa sin intermediarios externos</p>
                     </div>
                   </div>
@@ -2289,7 +2289,7 @@ export default function AdminPage() {
                       <img 
                         src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.quinchotabolango.cl/downloads/TabolangoAdmin.apk" 
                         alt="QR Descarga APK" 
-                        style={{ width: 140, height: 140, display: 'block', borderRadius: 8 }}
+                        style={{ width: 130, height: 130, display: 'block', borderRadius: 8 }}
                       />
                       <span style={{ fontSize: '0.7rem', color: '#64748b', fontWeight: 700, marginTop: 6, display: 'block' }}>
                         Escanear con celular
@@ -2297,9 +2297,9 @@ export default function AdminPage() {
                     </div>
 
                     <div style={{ flex: 1, minWidth: 200 }}>
-                      <h4 style={{ margin: '0 0 6px 0', fontSize: '1.1rem', color: '#1B4332' }}>Tabolango Admin Móvil</h4>
+                      <h4 style={{ margin: '0 0 6px 0', fontSize: '1.1rem', color: '#1B4332' }}>Tabolango Admin Android</h4>
                       <p style={{ margin: '0 0 16px 0', fontSize: '0.85rem', color: '#64748b', lineHeight: 1.4 }}>
-                        Lleva el control de reservas, check-in con escáner QR en portería, libro diario y solicitudes de formulario en tu bolsillo.
+                        Lleva el control de reservas, check-in con escáner QR en portería y solicitudes de formulario en Android.
                       </p>
                       <a
                         href="/downloads/TabolangoAdmin.apk"
@@ -2310,13 +2310,12 @@ export default function AdminPage() {
                           gap: 10,
                           background: '#1B4332',
                           color: '#ffffff',
-                          padding: '12px 22px',
+                          padding: '12px 20px',
                           borderRadius: '8px',
                           fontWeight: 700,
-                          fontSize: '0.92rem',
+                          fontSize: '0.9rem',
                           textDecoration: 'none',
                           boxShadow: '0 4px 14px rgba(27, 67, 50, 0.3)',
-                          transition: 'all 0.2s ease',
                         }}
                       >
                         <Download size={18} color="#ECF39E" />
@@ -2325,23 +2324,94 @@ export default function AdminPage() {
                     </div>
                   </div>
 
-                  <div style={{ background: '#f8fafc', padding: 16, borderRadius: 10, border: '1px solid #e2e8f0', marginBottom: 16 }}>
-                    <h5 style={{ margin: '0 0 8px 0', fontSize: '0.82rem', fontWeight: 800, textTransform: 'uppercase', color: '#475569' }}>
-                      Pasos rápidos para instalar en Android:
+                  <div style={{ background: '#f8fafc', padding: 14, borderRadius: 10, border: '1px solid #e2e8f0', marginBottom: 14 }}>
+                    <h5 style={{ margin: '0 0 6px 0', fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', color: '#475569' }}>
+                      Instalación en Android:
                     </h5>
-                    <ol style={{ margin: 0, paddingLeft: 18, fontSize: '0.82rem', color: '#475569', lineHeight: 1.6 }}>
-                      <li>Presiona <strong>"Descargar APK Directa"</strong> o escanea el QR con tu cámara.</li>
-                      <li>Si Chrome o Android muestra <em>"El archivo puede ser dañino"</em>, pulsa <strong>"Descargar de todos modos"</strong> (es una advertencia estándar para apps que no vienen de Google Play).</li>
+                    <ol style={{ margin: 0, paddingLeft: 18, fontSize: '0.8rem', color: '#475569', lineHeight: 1.5 }}>
+                      <li>Presiona <strong>"Descargar APK Directa"</strong> o escanea el QR.</li>
+                      <li>Si Chrome muestra <em>"El archivo puede ser dañino"</em>, pulsa <strong>"Descargar de todos modos"</strong>.</li>
                       <li>Toca el archivo descargado y presiona <strong>Instalar</strong>.</li>
                     </ol>
                   </div>
 
-                  <div style={{ background: '#ecfdf5', padding: 14, borderRadius: 10, border: '1px solid #a7f3d0' }}>
-                    <p style={{ margin: '0 0 4px 0', fontSize: '0.82rem', fontWeight: 800, color: '#065f46' }}>
-                      Credenciales de Acceso para la App:
+                  <div style={{ background: '#ecfdf5', padding: 12, borderRadius: 8, border: '1px solid #a7f3d0' }}>
+                    <p style={{ margin: 0, fontSize: '0.78rem', color: '#047857' }}>
+                      <strong>Admin:</strong> <code>admin@tabolango.cl</code> / <code>Tabolango2026*Admin</code>
                     </p>
-                    <p style={{ margin: 0, fontSize: '0.8rem', color: '#047857' }}>
-                      <strong>Admin:</strong> <code>admin@tabolango.cl</code> / <code>Tabolango2026*Admin</code><br />
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2: Descarga Directa IPA iPhone iOS */}
+              <div className={styles.cardTable} style={{ border: '2px solid #0f172a' }}>
+                <div className={styles.tableHeader} style={{ background: '#0f172a', color: '#ffffff' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                    <Smartphone size={22} color="#38bdf8" />
+                    <div>
+                      <h3 style={{ margin: 0, fontSize: '1.05rem', color: '#ffffff' }}>iPhone iOS (Instalador .IPA)</h3>
+                      <p style={{ margin: 0, fontSize: '0.78rem', color: '#94a3b8' }}>Instalación directa para iPhone (Modo Desarrollador)</p>
+                    </div>
+                  </div>
+                  <span style={{ background: '#38bdf8', color: '#0f172a', fontSize: '0.75rem', fontWeight: 800, padding: '3px 10px', borderRadius: 999 }}>
+                    v1.0.0 IPA
+                  </span>
+                </div>
+
+                <div style={{ padding: 24 }}>
+                  <div style={{ display: 'flex', gap: 20, alignItems: 'center', flexWrap: 'wrap', marginBottom: 20 }}>
+                    <div style={{ background: '#ffffff', padding: 12, borderRadius: 12, boxShadow: '0 4px 12px rgba(0,0,0,0.08)', textAlign: 'center' }}>
+                      <img 
+                        src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.quinchotabolango.cl/downloads/TabolangoAdmin.ipa" 
+                        alt="QR Descarga IPA iPhone" 
+                        style={{ width: 130, height: 130, display: 'block', borderRadius: 8 }}
+                      />
+                      <span style={{ fontSize: '0.7rem', color: '#64748b', fontWeight: 700, marginTop: 6, display: 'block' }}>
+                        Escanear con iPhone
+                      </span>
+                    </div>
+
+                    <div style={{ flex: 1, minWidth: 200 }}>
+                      <h4 style={{ margin: '0 0 6px 0', fontSize: '1.1rem', color: '#0f172a' }}>Tabolango Admin iPhone</h4>
+                      <p style={{ margin: '0 0 16px 0', fontSize: '0.85rem', color: '#64748b', lineHeight: 1.4 }}>
+                        Instalador directo `.ipa` para iPhone 12 Pro Max u otros dispositivos iOS sin pasar por App Store.
+                      </p>
+                      <a
+                        href="/downloads/TabolangoAdmin.ipa"
+                        download="TabolangoAdmin.ipa"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: 10,
+                          background: '#0f172a',
+                          color: '#ffffff',
+                          padding: '12px 20px',
+                          borderRadius: '8px',
+                          fontWeight: 700,
+                          fontSize: '0.9rem',
+                          textDecoration: 'none',
+                          boxShadow: '0 4px 14px rgba(15, 23, 42, 0.3)',
+                        }}
+                      >
+                        <Download size={18} color="#38bdf8" />
+                        Descargar IPA Directa (.ipa)
+                      </a>
+                    </div>
+                  </div>
+
+                  <div style={{ background: '#f8fafc', padding: 14, borderRadius: 10, border: '1px solid #e2e8f0', marginBottom: 14 }}>
+                    <h5 style={{ margin: '0 0 6px 0', fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', color: '#475569' }}>
+                      Instalación en iPhone:
+                    </h5>
+                    <ol style={{ margin: 0, paddingLeft: 18, fontSize: '0.8rem', color: '#475569', lineHeight: 1.5 }}>
+                      <li>Descarga el archivo <strong>"TabolangoAdmin.ipa"</strong> en tu iPhone o PC.</li>
+                      <li>En iPhone: ve a <strong>Ajustes &gt; Privacidad y Seguridad &gt; Modo de desarrollador</strong> y actívalo.</li>
+                      <li>Instala el archivo `.ipa` directamente y presiona <strong>Abrir</strong>.</li>
+                    </ol>
+                  </div>
+
+                  <div style={{ background: '#f0f9ff', padding: 12, borderRadius: 8, border: '1px solid #bae6fd' }}>
+                    <p style={{ margin: 0, fontSize: '0.78rem', color: '#0369a1' }}>
                       <strong>Operador:</strong> <code>operador@tabolango.cl</code> / <code>Quincho2026*Operador</code>
                     </p>
                   </div>

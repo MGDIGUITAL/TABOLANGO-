@@ -1,0 +1,24 @@
+{
+  "name": "Quincho Tabolango Admin",
+  "short_name": "Tabolango",
+  "description": "Panel de administración y check-in digital para Quincho Tabolango Limache",
+  "start_url": "/admin",
+  "display": "standalone",
+  "background_color": "#1B4332",
+  "theme_color": "#1B4332",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
