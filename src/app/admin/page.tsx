@@ -39,6 +39,7 @@ import {
   Phone,
   Mail,
   Search,
+  Download,
   CheckCircle,
   XCircle,
   Bot,
@@ -2266,22 +2267,109 @@ export default function AdminPage() {
 
           {/* TAB 8: API & SYNC */}
           {activeTab === 'api' && (
-            <div className={styles.cardTable}>
-              <div className={styles.tableHeader}>
-                <h3 className={styles.tableTitle}>Endpoints REST & Sincronización Móvil</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: 24 }}>
+              {/* Card 1: Descarga Directa APK */}
+              <div className={styles.cardTable} style={{ border: '2px solid #2d6a4f' }}>
+                <div className={styles.tableHeader} style={{ background: '#1B4332', color: '#ffffff' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                    <Smartphone size={22} color="#ECF39E" />
+                    <div>
+                      <h3 style={{ margin: 0, fontSize: '1.05rem', color: '#ffffff' }}>Descarga App Móvil (Android APK)</h3>
+                      <p style={{ margin: 0, fontSize: '0.78rem', color: '#cbd5e1' }}>Instalación directa sin intermediarios externos</p>
+                    </div>
+                  </div>
+                  <span style={{ background: '#52b788', color: '#081c15', fontSize: '0.75rem', fontWeight: 800, padding: '3px 10px', borderRadius: 999 }}>
+                    v1.0.0 APK
+                  </span>
+                </div>
+
+                <div style={{ padding: 24 }}>
+                  <div style={{ display: 'flex', gap: 20, alignItems: 'center', flexWrap: 'wrap', marginBottom: 20 }}>
+                    <div style={{ background: '#ffffff', padding: 12, borderRadius: 12, boxShadow: '0 4px 12px rgba(0,0,0,0.08)', textAlign: 'center' }}>
+                      <img 
+                        src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.quinchotabolango.cl/downloads/TabolangoAdmin.apk" 
+                        alt="QR Descarga APK" 
+                        style={{ width: 140, height: 140, display: 'block', borderRadius: 8 }}
+                      />
+                      <span style={{ fontSize: '0.7rem', color: '#64748b', fontWeight: 700, marginTop: 6, display: 'block' }}>
+                        Escanear con celular
+                      </span>
+                    </div>
+
+                    <div style={{ flex: 1, minWidth: 200 }}>
+                      <h4 style={{ margin: '0 0 6px 0', fontSize: '1.1rem', color: '#1B4332' }}>Tabolango Admin Móvil</h4>
+                      <p style={{ margin: '0 0 16px 0', fontSize: '0.85rem', color: '#64748b', lineHeight: 1.4 }}>
+                        Lleva el control de reservas, check-in con escáner QR en portería, libro diario y solicitudes de formulario en tu bolsillo.
+                      </p>
+                      <a
+                        href="/downloads/TabolangoAdmin.apk"
+                        download="TabolangoAdmin.apk"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: 10,
+                          background: '#1B4332',
+                          color: '#ffffff',
+                          padding: '12px 22px',
+                          borderRadius: '8px',
+                          fontWeight: 700,
+                          fontSize: '0.92rem',
+                          textDecoration: 'none',
+                          boxShadow: '0 4px 14px rgba(27, 67, 50, 0.3)',
+                          transition: 'all 0.2s ease',
+                        }}
+                      >
+                        <Download size={18} color="#ECF39E" />
+                        Descargar APK Directa
+                      </a>
+                    </div>
+                  </div>
+
+                  <div style={{ background: '#f8fafc', padding: 16, borderRadius: 10, border: '1px solid #e2e8f0', marginBottom: 16 }}>
+                    <h5 style={{ margin: '0 0 8px 0', fontSize: '0.82rem', fontWeight: 800, textTransform: 'uppercase', color: '#475569' }}>
+                      Pasos rápidos para instalar en Android:
+                    </h5>
+                    <ol style={{ margin: 0, paddingLeft: 18, fontSize: '0.82rem', color: '#475569', lineHeight: 1.6 }}>
+                      <li>Presiona <strong>"Descargar APK Directa"</strong> o escanea el QR con tu cámara.</li>
+                      <li>Si Chrome o Android muestra <em>"El archivo puede ser dañino"</em>, pulsa <strong>"Descargar de todos modos"</strong> (es una advertencia estándar para apps que no vienen de Google Play).</li>
+                      <li>Toca el archivo descargado y presiona <strong>Instalar</strong>.</li>
+                    </ol>
+                  </div>
+
+                  <div style={{ background: '#ecfdf5', padding: 14, borderRadius: 10, border: '1px solid #a7f3d0' }}>
+                    <p style={{ margin: '0 0 4px 0', fontSize: '0.82rem', fontWeight: 800, color: '#065f46' }}>
+                      Credenciales de Acceso para la App:
+                    </p>
+                    <p style={{ margin: 0, fontSize: '0.8rem', color: '#047857' }}>
+                      <strong>Admin:</strong> <code>admin@tabolango.cl</code> / <code>Tabolango2026*Admin</code><br />
+                      <strong>Operador:</strong> <code>operador@tabolango.cl</code> / <code>Quincho2026*Operador</code>
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div style={{ padding: 24, fontSize: '0.92rem', lineHeight: 1.6 }}>
-                <p>
-                  Esta plataforma web actúa como el <strong>servidor central SaaS</strong> para la
-                  aplicación móvil <strong>Tabolango Admin</strong>. Ambas plataformas comparten la
-                  misma base de datos y endpoints en tiempo real:
-                </p>
-                <ul>
-                  <li><code>GET /api/v1/bookings</code>: Retorna reservas para el calendario y lista mensual.</li>
-                  <li><code>POST /api/v1/bookings/[id]/checkin</code>: Recibe y sella el ingreso por QR desde el teléfono.</li>
-                  <li><code>GET /api/v1/admin/caja</code>: Sincroniza libro diario y garantías en custodia.</li>
-                  <li><code>POST /api/v1/ai/chat</code>: Copiloto Gemini con contexto del quincho.</li>
-                </ul>
+
+              {/* Card 2: Endpoints REST */}
+              <div className={styles.cardTable}>
+                <div className={styles.tableHeader}>
+                  <h3 className={styles.tableTitle}>Endpoints REST & Sincronización Móvil</h3>
+                </div>
+                <div style={{ padding: 24, fontSize: '0.92rem', lineHeight: 1.6 }}>
+                  <p>
+                    Esta plataforma web actúa como el <strong>servidor central SaaS</strong> para la
+                    aplicación móvil <strong>Tabolango Admin</strong>. Ambas plataformas comparten la
+                    misma base de datos y endpoints en tiempo real:
+                  </p>
+                  <ul style={{ paddingLeft: 20, color: '#334155' }}>
+                    <li style={{ marginBottom: 8 }}><code>GET /api/v1/bookings</code>: Retorna reservas para el calendario y lista mensual.</li>
+                    <li style={{ marginBottom: 8 }}><code>POST /api/v1/bookings/[id]/checkin</code>: Recibe y sella el ingreso por QR desde el teléfono.</li>
+                    <li style={{ marginBottom: 8 }}><code>GET /api/v1/admin/solicitudes</code>: Consulta y actualiza prospectos del formulario web.</li>
+                    <li style={{ marginBottom: 8 }}><code>GET /api/v1/admin/caja</code>: Sincroniza libro diario y garantías en custodia.</li>
+                    <li style={{ marginBottom: 8 }}><code>POST /api/v1/ai/chat</code>: Copiloto Gemini con contexto del quincho.</li>
+                  </ul>
+                  <div style={{ marginTop: 20, padding: 12, background: '#f1f5f9', borderRadius: 8, fontSize: '0.8rem', color: '#64748b' }}>
+                    Servidor Base: <code>https://www.quinchotabolango.cl/api/v1</code>
+                  </div>
+                </div>
               </div>
             </div>
           )}
