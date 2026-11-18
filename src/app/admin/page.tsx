@@ -323,7 +323,7 @@ export default function AdminPage() {
       localStorage.setItem('tabolango_admin_auth', 'true')
       setPinError('')
     } else {
-      setPinError('Credencial o PIN incorrecto. (Usa: 1234 o admin)')
+      setPinError('Credencial o PIN incorrecto. Verifica tus datos de acceso o consulta con la administración.')
     }
   }
 
@@ -659,13 +659,9 @@ export default function AdminPage() {
               Ingresar al Panel
             </button>
 
-            <div style={{ marginTop: 18, padding: 12, background: '#f8fafc', borderRadius: 8, border: '1px solid #e2e8f0', fontSize: '0.8rem', textAlign: 'left', color: '#475569' }}>
-              <div style={{ fontWeight: 700, color: '#1B4332', marginBottom: 4, display: 'flex', alignItems: 'center', gap: 6 }}>
-                <Lock size={13} /> Credenciales de Acceso:
-              </div>
-              <div style={{ marginTop: 2 }}>• <strong>Master PIN:</strong> <code style={{ background: '#e2e8f0', padding: '1px 5px', borderRadius: 4 }}>1234</code></div>
-              <div style={{ marginTop: 2 }}>• <strong>Admin General:</strong> <code>admin@tabolango.cl</code> / <code>Tabolango2026*Admin</code></div>
-              <div style={{ marginTop: 2 }}>• <strong>Operador Quincho:</strong> <code>operador@tabolango.cl</code> / <code>Quincho2026*Operador</code></div>
+            <div style={{ marginTop: 22, textAlign: 'center', fontSize: '0.8rem', color: '#94a3b8', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
+              <ShieldCheck size={15} color="#52b788" />
+              <span>Acceso restringido • Personal autorizado Quincho Tabolango</span>
             </div>
           </form>
 
@@ -2359,8 +2355,8 @@ export default function AdminPage() {
                   </div>
 
                   <div style={{ background: '#ecfdf5', padding: 12, borderRadius: 8, border: '1px solid #a7f3d0' }}>
-                    <p style={{ margin: 0, fontSize: '0.78rem', color: '#047857' }}>
-                      <strong>Admin:</strong> <code>admin@tabolango.cl</code> / <code>Tabolango2026*Admin</code>
+                    <p style={{ margin: 0, fontSize: '0.78rem', color: '#047857', display: 'flex', alignItems: 'center', gap: 6 }}>
+                      <ShieldCheck size={14} /> Acceso protegido por autenticación. Consulta tu documento confidencial de claves.
                     </p>
                   </div>
                 </div>
@@ -2458,9 +2454,9 @@ export default function AdminPage() {
                     </p>
                   </div>
 
-                  <div style={{ background: '#f0f9ff', padding: 12, borderRadius: 8, border: '1px solid #bae6fd' }}>
-                    <p style={{ margin: 0, fontSize: '0.78rem', color: '#0369a1' }}>
-                      <strong>Credenciales:</strong> <code>admin@tabolango.cl</code> / <code>Tabolango2026*Admin</code>
+                  <div style={{ background: '#ecfdf5', padding: 12, borderRadius: 8, border: '1px solid #a7f3d0' }}>
+                    <p style={{ margin: 0, fontSize: '0.78rem', color: '#047857', display: 'flex', alignItems: 'center', gap: 6 }}>
+                      <ShieldCheck size={14} /> Acceso protegido por autenticación. Consulta tu documento confidencial de claves.
                     </p>
                   </div>
                 </div>
