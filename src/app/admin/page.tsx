@@ -2343,18 +2343,18 @@ export default function AdminPage() {
                 </div>
               </div>
 
-              {/* Card 2: Descarga Directa IPA iPhone iOS */}
+              {/* Card 2: Instalación Directa iPhone iOS */}
               <div className={styles.cardTable} style={{ border: '2px solid #0f172a' }}>
                 <div className={styles.tableHeader} style={{ background: '#0f172a', color: '#ffffff' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                     <Smartphone size={22} color="#38bdf8" />
                     <div>
-                      <h3 style={{ margin: 0, fontSize: '1.05rem', color: '#ffffff' }}>iPhone iOS (Instalador .IPA)</h3>
-                      <p style={{ margin: 0, fontSize: '0.78rem', color: '#94a3b8' }}>Instalación directa para iPhone (Modo Desarrollador)</p>
+                      <h3 style={{ margin: 0, fontSize: '1.05rem', color: '#ffffff' }}>iPhone iOS (Instalación Directa)</h3>
+                      <p style={{ margin: 0, fontSize: '0.78rem', color: '#94a3b8' }}>100% directo desde tu servidor • Sin App Store ni cuentas externas</p>
                     </div>
                   </div>
                   <span style={{ background: '#38bdf8', color: '#0f172a', fontSize: '0.75rem', fontWeight: 800, padding: '3px 10px', borderRadius: 999 }}>
-                    v1.0.0 IPA
+                    iOS Nativo
                   </span>
                 </div>
 
@@ -2362,8 +2362,8 @@ export default function AdminPage() {
                   <div style={{ display: 'flex', gap: 20, alignItems: 'center', flexWrap: 'wrap', marginBottom: 20 }}>
                     <div style={{ background: '#ffffff', padding: 12, borderRadius: 12, boxShadow: '0 4px 12px rgba(0,0,0,0.08)', textAlign: 'center' }}>
                       <img 
-                        src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.quinchotabolango.cl/downloads/TabolangoAdmin.ipa" 
-                        alt="QR Descarga IPA iPhone" 
+                        src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.quinchotabolango.cl/admin" 
+                        alt="QR Acceso iPhone" 
                         style={{ width: 130, height: 130, display: 'block', borderRadius: 8 }}
                       />
                       <span style={{ fontSize: '0.7rem', color: '#64748b', fontWeight: 700, marginTop: 6, display: 'block' }}>
@@ -2374,11 +2374,10 @@ export default function AdminPage() {
                     <div style={{ flex: 1, minWidth: 200 }}>
                       <h4 style={{ margin: '0 0 6px 0', fontSize: '1.1rem', color: '#0f172a' }}>Tabolango Admin iPhone</h4>
                       <p style={{ margin: '0 0 16px 0', fontSize: '0.85rem', color: '#64748b', lineHeight: 1.4 }}>
-                        Instalador directo `.ipa` para iPhone 12 Pro Max u otros dispositivos iOS sin pasar por App Store.
+                        Instala la app directamente en tu iPhone 12 Pro Max. Se ejecuta a pantalla completa, rápida y con acceso directo a tus reservas y check-in.
                       </p>
-                      <a
-                        href="/downloads/TabolangoAdmin.ipa"
-                        download="TabolangoAdmin.ipa"
+                      <button
+                        onClick={() => alert("📱 En tu iPhone: Pulsa el botón Compartir de Safari (el ícono cuadrado con flecha arriba) y selecciona 'Añadir a la pantalla de inicio'. ¡La app quedará instalada de inmediato sin ninguna cuenta externa!")}
                         style={{
                           display: 'inline-flex',
                           alignItems: 'center',
@@ -2389,30 +2388,34 @@ export default function AdminPage() {
                           borderRadius: '8px',
                           fontWeight: 700,
                           fontSize: '0.9rem',
-                          textDecoration: 'none',
+                          border: 'none',
+                          cursor: 'pointer',
                           boxShadow: '0 4px 14px rgba(15, 23, 42, 0.3)',
                         }}
                       >
-                        <Download size={18} color="#38bdf8" />
-                        Descargar IPA Directa (.ipa)
-                      </a>
+                        <Smartphone size={18} color="#38bdf8" />
+                        Instalar en este iPhone
+                      </button>
                     </div>
                   </div>
 
                   <div style={{ background: '#f8fafc', padding: 14, borderRadius: 10, border: '1px solid #e2e8f0', marginBottom: 14 }}>
-                    <h5 style={{ margin: '0 0 6px 0', fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', color: '#475569' }}>
-                      Instalación en iPhone:
+                    <h5 style={{ margin: '0 0 8px 0', fontSize: '0.85rem', fontWeight: 800, textTransform: 'uppercase', color: '#0f172a' }}>
+                      Pasos para instalar en tu iPhone en 10 segundos:
                     </h5>
-                    <ol style={{ margin: 0, paddingLeft: 18, fontSize: '0.8rem', color: '#475569', lineHeight: 1.5 }}>
-                      <li>Descarga el archivo <strong>"TabolangoAdmin.ipa"</strong> en tu iPhone o PC.</li>
-                      <li>En iPhone: ve a <strong>Ajustes &gt; Privacidad y Seguridad &gt; Modo de desarrollador</strong> y actívalo.</li>
-                      <li>Instala el archivo `.ipa` directamente y presiona <strong>Abrir</strong>.</li>
+                    <ol style={{ margin: 0, paddingLeft: 18, fontSize: '0.84rem', color: '#334155', lineHeight: 1.6 }}>
+                      <li>En <strong>Safari</strong> (abajo en la barra del navegador), toca el ícono de <strong>Compartir</strong> (el cuadrado con flecha hacia arriba).</li>
+                      <li>Desliza un poco hacia abajo en el menú y toca <strong>"Añadir a la pantalla de inicio"</strong>.</li>
+                      <li>Toca <strong>"Añadir"</strong> arriba a la derecha.</li>
                     </ol>
+                    <p style={{ margin: '8px 0 0 0', fontSize: '0.78rem', color: '#16a34a', fontWeight: 700 }}>
+                      ✓ Quedará el icono de Tabolango en tu pantalla y abrirá como una aplicación nativa completa.
+                    </p>
                   </div>
 
                   <div style={{ background: '#f0f9ff', padding: 12, borderRadius: 8, border: '1px solid #bae6fd' }}>
                     <p style={{ margin: 0, fontSize: '0.78rem', color: '#0369a1' }}>
-                      <strong>Operador:</strong> <code>operador@tabolango.cl</code> / <code>Quincho2026*Operador</code>
+                      <strong>Credenciales:</strong> <code>admin@tabolango.cl</code> / <code>Tabolango2026*Admin</code>
                     </p>
                   </div>
                 </div>
